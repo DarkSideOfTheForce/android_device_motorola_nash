@@ -20,9 +20,6 @@ $(call inherit-product-if-exists, vendor/motorola/nash/nash-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += device/motorola/nash/overlay
 
-PRODUCT_ENFORCE_RRO_TARGETS := \
-    framework-res
-
 # A/B updater
 AB_OTA_UPDATER := true
 

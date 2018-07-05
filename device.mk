@@ -14,6 +14,34 @@
 # limitations under the License.
 #
 
+# Vendor blobs
+$(call inherit-product-if-exists, vendor/motorola/nash/nash-vendor.mk)
+
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += device/motorola/nash/overlay
+
+PRODUCT_ENFORCE_RRO_TARGETS := \
+    framework-res
+
+# A/B updater
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS += \
+    boot \
+    system
+
+AB_OTA_POSTINSTALL_CONFIG += \
+    RUN_POSTINSTALL_system=true \
+    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
+    FILESYSTEM_TYPE_system=ext4 \
+    POSTINSTALL_OPTIONAL_system=true
+
+PRODUCT_PACKAGES += \
+    otapreopt_script \
+    update_engine \
+    update_engine_sideload \
+    update_verifier
+
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 560dpi
@@ -67,6 +95,14 @@ TARGET_SCREEN_WIDTH := 1440
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
     android.hardware.boot@1.0-service
+
+PRODUCT_PACKAGES += \
+    bootctrl.qcom
+
+PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+    bootctrl.qcom \
+    libgptutils \
+    libz
 
 # Camera
 PRODUCT_COPY_FILES += \

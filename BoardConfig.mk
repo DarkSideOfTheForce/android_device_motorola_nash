@@ -16,6 +16,11 @@
 
 DEVICE_PATH := device/motorola/nash
 
+# The following modules are included in debuggable builds only.
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl \
+    update_engine_client
+
 # Platform
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -102,6 +107,9 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 QCOM_BT_USE_BTNV := true
+
+# Boot Animtion
+TARGET_BOOTANIMATION_HALF_RES := true
 
 # Camera
 USE_CAMERA_STUB := true
@@ -199,6 +207,13 @@ BOARD_USES_QC_TIME_SERVICES := true
 # Treble
 PRODUCT_SHIPPING_API_LEVEL := 25
 PRODUCT_COMPATIBILITY_MATRIX_LEVEL_OVERRIDE := 27
+
+# TWRP
+ifeq ($(WITH_TWRP),true)
+$(call inherit-product, device/motorola/nash/twrp/twrp.mk)
+else
+TARGET_RECOVERY_FSTAB := device/motorola/nash/rootdir/etc/fstab.qcom
+endif
 
 # Vendor Init
 TARGET_INIT_VENDOR_LIB := libinit_nash

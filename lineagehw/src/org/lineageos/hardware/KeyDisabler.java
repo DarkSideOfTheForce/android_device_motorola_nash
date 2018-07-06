@@ -16,7 +16,7 @@
 
 package org.lineageos.hardware;
 
-import org.lineageos.internal.util.FileUtils;
+import org.lineageos.settings.device.FileUtils;
 
 import com.fingerprints.extension.V1_0.FingerprintNavigation;
 

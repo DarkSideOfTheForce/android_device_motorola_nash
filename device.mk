@@ -258,6 +258,14 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
     android.hardware.keymaster@3.0-service
 
+# LED packages
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service.nash
+
+# LineageActions
+PRODUCT_PACKAGES += \
+    LineageActions
+
 # Media
 PRODUCT_COPY_FILES += \
     device/motorola/nash/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
@@ -270,10 +278,6 @@ PRODUCT_COPY_FILES += \
 # ModService
 PRODUCT_COPY_FILES += \
     device/motorola/nash/sysconfig/whitelist_modservice.xml:system/etc/sysconfig/whitelist_modservice.xml
-
-# MotoActions
-PRODUCT_PACKAGES += \
-    MotoActions
 
 # Network
 PRODUCT_PACKAGES += \

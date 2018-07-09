@@ -7,7 +7,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 PRODUCT_DEVICE := nash
 PRODUCT_NAME := lineage_nash
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := Moto Z2
+PRODUCT_MODEL := Moto Z2 Force
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_RELEASE_NAME := nash
 

@@ -26,5 +26,5 @@ $(call inherit-product, device/motorola/nash/device.mk)
 PRODUCT_NAME := full_nash
 PRODUCT_DEVICE := nash
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := Moto Z2
+PRODUCT_MODEL := Moto Z2 Force
 PRODUCT_MANUFACTURER := Motorola

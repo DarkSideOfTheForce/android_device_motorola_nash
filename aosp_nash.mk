@@ -1,4 +1,4 @@
-# Inherit some common Lineage stuff.
+# Inherit some common AOSP stuff.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
@@ -62,7 +62,7 @@ endif
 
 # Device identifiers
 PRODUCT_DEVICE := nash
-PRODUCT_NAME := lineage_nash
+PRODUCT_NAME := aosp_nash
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := Moto Z2
 PRODUCT_MANUFACTURER := Motorola

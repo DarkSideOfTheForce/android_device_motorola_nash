@@ -1,7 +1,7 @@
 $(call inherit-product, device/motorola/nash/full_nash.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/toxyc/config/common_full_phone.mk)
 
 # Device identifiers
 PRODUCT_DEVICE := nash
@@ -15,3 +15,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
         PRODUCT_NAME=nash
 
 BUILD_FINGERPRINT := motorola/nash/nash:8.0.0/OPXS27.109-34-10/5:user/release-keys
+
+
+#export
+TOXYC_BUILD_TYPE=OFFICIAL

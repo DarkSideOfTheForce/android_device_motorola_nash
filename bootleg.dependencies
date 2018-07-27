@@ -1,0 +1,26 @@
+[
+  {
+    "remote":      "lineage",
+    "repository":  "android_external_bson",
+    "target_path": "external/bson",
+    "branch":      "lineage-15.1"
+  },
+  {
+    "remote":      "github",
+    "repository" : "PixelExperience/packages_resources_MotoActions",
+    "target_path": "packages/resources/MotoActions",
+    "branch":      "oreo-mr1"
+  },
+  {
+    "remote":      "lineage",
+    "repository":  "android_kernel_motorola_msm8998",
+    "target_path": "kernel/motorola/msm8998",
+    "branch":      "lineage-15.1"
+  },
+  {
+    "remote":      "github",
+    "repository":  "DarkSideOfTheForce/vendor_motorola_nash",
+    "target_path": "vendor/motorola/nash",
+    "branch":      "lineage-15.1"
+  }
+]
